@@ -20,6 +20,7 @@ export default function Home() {
           <h2 className={inter.className}>Peter Laning</h2>
           <p className={inter.className}><strong>Web Design</strong></p>
         </div>
+        <div className={styles.model}></div>
       </div>
     </div>
   );
