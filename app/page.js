@@ -13,6 +13,8 @@ export default function Home() {
         <div className={styles.item} style={{"--position": 3}}><img src="images/javascript_200x200.svg"/></div>
         <div className={styles.item} style={{"--position": 4}}><img src="images/sql-server_200x200.svg"/></div>
         <div className={styles.item} style={{"--position": 5}}><img src="images/react_200x200.svg"/></div>
+        <div className={styles.item} style={{"--position": 6}}><img src="images/css_200x200.svg"/></div>
+        <div className={styles.item} style={{"--position": 7}}><img src="images/ux-ui_200x200.svg"/></div>
       </div>
       <div className={styles.content}>
         <h1 className={inter.className}>Portfolio</h1>
