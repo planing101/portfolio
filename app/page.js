@@ -15,7 +15,7 @@ export default function Home() {
         <div className={styles.item} style={{"--position": 5}}><img src="images/react_200x200.svg"/></div>
         <div className={styles.item} style={{"--position": 6}}><img src="images/css_200x200.svg"/></div>
         <div className={styles.item} style={{"--position": 7}}><img src="images/ux-ui_200x200.svg"/></div>
-        <div className={styles.item} style={{"--position": 8}}><img src="images/azure-devops_200x200"/></div>
+        <div className={styles.item} style={{"--position": 8}}><img src="images/azure-devops_200x200.svg"/></div>
       </div>
       <div className={styles.content}>
         <h1 className={inter.className}>Portfolio</h1>
