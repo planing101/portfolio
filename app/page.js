@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <div className={styles.banner}>
-      <div className={styles.slider} style={{"--quantity": 5}}>
+      <div className={styles.slider} style={{"--quantity": 7}}>
         <div className={styles.item} style={{"--position": 1}}><img src="images/dot-net_200x200.svg"/></div>
         <div className={styles.item} style={{"--position": 2}}><img src="images/csharp_200x200.svg"/></div>
         <div className={styles.item} style={{"--position": 3}}><img src="images/javascript_200x200.svg"/></div>
