@@ -1,5 +1,4 @@
 import { Inter } from "next/font/google";
-//import Image from "next/image";
 import styles from "./page.module.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,7 +14,7 @@ export default function Home() {
         <div className={styles.item} style={{"--position": 5}}><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/react_200x200.svg`}/></div>
         <div className={styles.item} style={{"--position": 6}}><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/css_200x200.svg`}/></div>
         <div className={styles.item} style={{"--position": 7}}><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/ux-ui_200x200.svg`}/></div>
-        <div className={styles.item} style={{"--position": 8}}><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/azure-devops_200x200.svg`}/></div>
+        <div className={styles.item} style={{"--position": 8}}><a href={`${process.env.NEXT_PUBLIC_BASE_URL}/new`}><img src={`${process.env.NEXT_PUBLIC_BASE_URL}/images/azure-devops_200x200.svg`}/></a></div>
       </div>
       <div className={styles.content}>
         <h1 className={inter.className}>Portfolio</h1>
