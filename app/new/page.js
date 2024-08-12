@@ -1,3 +1,7 @@
+export const metadata = {
+  title: "Employement History | Pete's Portfolio"
+};
+
 export default function Page() {
     return (
       <>
