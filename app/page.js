@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 import Image from 'next/image';
 import Link from 'next/link';
 import Modal from './components/modal';
-import Dialog from './components/dialog';
+//import Dialog from './components/dialog';
 import React, { useState } from 'react';
 
 import styles from "./page.module.css";
