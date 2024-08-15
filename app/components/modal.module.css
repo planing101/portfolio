@@ -12,25 +12,11 @@
 }
 
 .modal {
-    background: white;
-    /* min-width: 300px; */
+    color: white;
+    background: rgb(24, 22, 29);
     width: 90vmin;
-    height: 90vmin;    padding: 20px;
-    border-radius: 5px;
-}
-
-.closeButton {
-    margin-bottom: 10px;
-    cursor: pointer;
-}
-
-.closeCross {
-    font-weight: 700;
-    border: none;
-    background: transparent;
-    margin-bottom: 10px;
-    float: right;
-    cursor: pointer;
+    padding: 20px;
+    border-radius: 6px;
 }
 
 .modalHeader h2 {
@@ -38,9 +24,58 @@
 }
 
 .modalBody {
+    height: 50vh;
     margin: 0;
 }
 
-.modalFooter button {
+.modalFooter {
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem .75rem .25rem;
+    border-top: 1px solid #dee2e6;
+    border-bottom-right-radius: calc(.3rem - 1px);
+    border-bottom-left-radius: calc(.3rem - 1px);
+}
+
+.closeButton {
+    color: #dee2e6;
+    background-color: transparent;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+            user-select: none;
+    padding: .375rem .75rem;
+    border: solid 1px #dee2e6;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    cursor: pointer;
+}
+
+.closeButton:hover {
+    color: #212529;
+    background-color: #dee2e6;
+    border-color: #a1a4a7;
+}
+
+.closeCross {
+    color: white;
+    background: transparent;
+    border: none;
+    zoom: 1.5;
     float: right;
+    cursor: pointer;
+    transition: color .15s ease-in-out;
+}
+
+.closeCross:hover {
+    color: #a1a4a7;
 }
