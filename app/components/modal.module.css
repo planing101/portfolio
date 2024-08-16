@@ -12,7 +12,7 @@
 }
 
 .modal {
-    color: white;
+    color: var(--modal-forecolour);
     background: rgb(24, 22, 29);
     width: 90vmin;
     padding: 20px;
@@ -35,13 +35,13 @@
     align-items: center;
     justify-content: flex-end;
     padding: 1rem .75rem .25rem;
-    border-top: 1px solid #dee2e6;
+    border-top: 1px solid var(--modal-forecolour);
     border-bottom-right-radius: calc(.3rem - 1px);
     border-bottom-left-radius: calc(.3rem - 1px);
 }
 
 .closeButton {
-    color: #dee2e6;
+    color: var(--modal-forecolour);
     background-color: transparent;
     display: inline-block;
     font-size: 1rem;
@@ -54,7 +54,7 @@
        -moz-user-select: none;
             user-select: none;
     padding: .375rem .75rem;
-    border: solid 1px #dee2e6;
+    border: solid 1px var(--modal-forecolour);
     border-radius: .25rem;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     cursor: pointer;
@@ -62,12 +62,12 @@
 
 .closeButton:hover {
     color: #212529;
-    background-color: #dee2e6;
+    background-color: var(--modal-forecolour);
     border-color: #a1a4a7;
 }
 
 .closeCross {
-    color: white;
+    color: var(--modal-forecolour);
     background: transparent;
     border: none;
     zoom: 1.5;
