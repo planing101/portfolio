@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { fetchItemById } from '../services/appservice';
+import { fetchItemById } from '../services/appService';
 
 import styles from './slider.module.css';
 

@@ -1,4 +1,4 @@
-import { fetchModelContentByItemId } from '../services/appservice';
+import { fetchModelContentByItemId } from '../services/appService';
 
 import styles from './modal.module.css';
 
