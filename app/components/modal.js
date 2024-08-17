@@ -1,20 +1,22 @@
-//import React from 'react';
+import { fetchModelContentByItemId } from '../services/appservice';
 
 import styles from './modal.module.css';
 
-export default function Modal({ title, isOpen, onClose, children }) {
+export default function Modal({ itemId, isOpen, onClose, children }) {
     if (!isOpen)
         return null;
 
+    const modalModel = fetchModelContentByItemId(itemId);
+ 
     return (
         <div className={styles.overlay}>
             <div className={styles.modal}>
                 <div className={styles.modalHeader}>
                     <button onClick={onClose} className={styles.closeCross}>&times;</button>
-                    <h2>{title}</h2>
+                    <h2>{modalModel.title}</h2>
                 </div>
                 <div className={styles.modalBody}>
-                    {children}
+                    {modalModel.body}
                 </div>
                 <div className={styles.modalFooter}>
                     <button onClick={onClose} className={styles.closeButton}>Close</button>

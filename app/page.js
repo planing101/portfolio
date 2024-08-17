@@ -11,11 +11,11 @@ import styles from "./page.module.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  const baseRoute = process.env.NEXT_PUBLIC_BASE_URL;
-  
+  const [itemId, setItemId] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
  
-  const openModal = () => {
+  const openModal = (e) => {
+    setItemId(parseInt(e.currentTarget.dataset.itemId));
     setIsModalOpen(true);
   };
 
@@ -27,15 +27,15 @@ export default function Home() {
     <>
       <div className={styles.banner}>
         <Slider qty={9}>
-          <SliderItem pos={1} imageName="dot-net_200x200.svg" openModal={openModal}/>
-          <SliderItem pos={2} imageName="csharp_200x200.svg" openModal={openModal}/>
-          <SliderItem pos={3} imageName="javascript_200x200.svg" openModal={openModal}/>
-          <SliderItem pos={4} imageName="sql-server_200x200.svg" openModal={openModal}/>
-          <SliderItem pos={5} imageName="react_200x200.svg" openModal={openModal}/>
-          <SliderItem pos={6} imageName="angularjs_200x200.svg" openModal={openModal}/>
-          <SliderItem pos={7} imageName="css_200x200.svg" openModal={openModal}/>
-          <SliderItem pos={8} imageName="ux-ui_200x200.svg" openModal={openModal}/>
-          <SliderItem pos={9} imageName="azure-devops_200x200.svg" openModal={openModal}/>
+          <SliderItem itemId={1} openModal={openModal}/>
+          <SliderItem itemId={2} openModal={openModal}/>
+          <SliderItem itemId={3} openModal={openModal}/>
+          <SliderItem itemId={4} openModal={openModal}/>
+          <SliderItem itemId={5} openModal={openModal}/>
+          <SliderItem itemId={6} openModal={openModal}/>
+          <SliderItem itemId={7} openModal={openModal}/>
+          <SliderItem itemId={8} openModal={openModal}/>
+          <SliderItem itemId={9} openModal={openModal}/>
         </Slider>
         <div className={styles.content}>
           <h1 className={inter.className}>Portfolio</h1>
@@ -46,9 +46,7 @@ export default function Home() {
           <div className={styles.model}></div>
         </div>
       </div>
-      <Modal title="Modal Title" isOpen={isModalOpen} onClose={closeModal}>
-        <p>This is the modal content</p>
-      </Modal>
+      <Modal itemId={itemId} isOpen={isModalOpen} onClose={closeModal}/>
     </>
   );
 }
