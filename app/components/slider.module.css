@@ -30,6 +30,7 @@
   }
   
     .slider .item img:hover {
+      background-color: rgba(255, 255, 255, 0.5);
       box-shadow: 0px 0px 20px white;
       outline: solid 1px white;
       transform: scale(1.1);

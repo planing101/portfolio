@@ -1,6 +1,7 @@
 'use client'
 
 import { Inter } from "next/font/google";
+// import HelpingHand from "./components/helpingHand"
 import Slider from "./components/slider";
 import SliderItem from "./components/slider-item";
 import Modal from './components/modal';
@@ -37,6 +38,7 @@ export default function Home() {
           <SliderItem itemId={8} openModal={openModal}/>
           <SliderItem itemId={9} openModal={openModal}/>
         </Slider>
+        {/* <div className={styles.hintHand}></div> */}
         <div className={styles.content}>
           <h1 className={inter.className}>Portfolio</h1>
           <div className={styles.author}>
@@ -46,6 +48,7 @@ export default function Home() {
           <div className={styles.model}></div>
         </div>
       </div>
+      {/* <HelpingHand/> */}
       <Modal itemId={itemId} isOpen={isModalOpen} onClose={closeModal}/>
     </>
   );

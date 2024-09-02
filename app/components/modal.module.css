@@ -19,12 +19,17 @@
     border-radius: 6px;
 }
 
-.modalHeader h2 {
-    margin: 0;
+.modalHeader {
+    margin-bottom: 10px;
 }
+
+    .modalHeader h2 {
+        margin: 0;
+    }
 
 .modalBody {
     height: 50vh;
+    padding: 10px;
     margin: 0;
 }
 

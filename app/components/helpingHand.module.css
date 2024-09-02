@@ -1,0 +1,49 @@
+.hintHand {
+    /* height: 200px;
+    width: 200px; */
+    /* background-image: url('/portfolio/images/pointer-1_200x200.png');
+    background-repeat: no-repeat; */
+    /* top: calc(10% + 160px);
+    left: calc(50% - 100px); */
+    /* top: 50%;
+    left: 50%; */
+    /* position: relative; */
+    /* animation: showHint 3s ease-in-out infinite; */
+    /* transform:
+      translateX(100vw)
+      rotateZ(0); */
+    z-index: 3;
+  }
+  
+  @keyframes showHint {
+    0% {
+      transform:
+        translateX(100vw)
+        /* translateY(50vh) */
+        rotateZ(0);
+    }
+    40% {
+      background-image: url('/portfolio/images/pointer-1_200x200.png');
+      transform:
+        translateX(0)
+        /* translateY(0) */
+        rotateZ(-16deg);
+    }
+    50% {
+      background-image: url('/portfolio/images/pointer-2_200x200.png');
+    }
+    60% {
+      background-image: url('/portfolio/images/pointer-1_200x200.png');
+        transform: 
+          translateX(0)
+          /* translateY(0) */
+          rotateZ(-16deg);
+    }
+    100% {
+        transform: 
+          translateX(100vw)
+          /* translateY(50vh) */
+          rotateZ(0);
+    }
+  }
+  
