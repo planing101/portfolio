@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import DOMPurify from 'dompurify'; // For sanitizing HTML if needed
+import DOMPurify from 'dompurify'; // For sanitizing HTML
 import { fetchModelContentByItemId } from '../services/appService';
 
 import styles from './modal.module.css';
