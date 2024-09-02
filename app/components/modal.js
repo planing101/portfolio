@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-//import DOMPurify from 'dompurify'; // For sanitizing HTML if needed
+import DOMPurify from 'dompurify'; // For sanitizing HTML if needed
 import { fetchModelContentByItemId } from '../services/appService';
 
 import styles from './modal.module.css';
@@ -21,8 +21,6 @@ export default function Modal({ itemId, isOpen, onClose, children }) {
     if (!isOpen)
         return null;
 
-    //const modalModel = fetchModelContentByItemId(itemId);
- 
     return (
         <div className={styles.overlay}>
             <div className={styles.modal}>
@@ -31,9 +29,8 @@ export default function Modal({ itemId, isOpen, onClose, children }) {
                     <h2>{modalModel.title}</h2>
                 </div>
                 <div className={styles.modalBody}>
-                    {/* {modalModel.body} */}
                     {modalModel.body.map((text, index) => (
-                        <p key={index} dangerouslySetInnerHTML={{ __html: text }} />
+                        <p key={index} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(text) }} />
                     ))}
                 </div>
                 <div className={styles.modalFooter}>
