@@ -1,21 +1,21 @@
 .slider {
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   position: absolute;
   top: 10%;
-  left: calc(50% - 100px);
+  left: calc(50% - 75px);
   transform-style: preserve-3d;
-  transform: perspective(1000px);
+  /* transform: perspective(1000px); */
   animation: autoRun 20s linear infinite;
   z-index: 2;
 }
 
-.slider .item {
+  .slider .item {
     position: absolute;
     inset: 0 0 0 0;
     transform: 
       rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
-      translateZ(400px);
+      translateZ(350px);
   }
   
     .slider .item:hover {
@@ -52,4 +52,20 @@
       rotateY(360deg);
   }
 
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  .slider {
+    width: 100px;
+    height: 100px;
+    top: 20%;
+    left: calc(50% - 50px);
+  }
+  
+  .slider .item {
+    transform: 
+      rotateY(calc((var(--position) - 1) * (360 / var(--quantity)) * 1deg))
+      translateZ(200px);
+  }
+  
 }
