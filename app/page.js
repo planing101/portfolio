@@ -42,14 +42,11 @@ export default function Home() {
         {/* <div className={styles.hintHand}></div> */}
         <div className={styles.content}>
           <h1 className={inter.className}>Portfolio</h1>
-          <div className={styles.author}>
+          {/* <div className={styles.author}>
             <h2 className={inter.className}>Peter Laning</h2>
-            <p className={inter.className}><strong>Web Design</strong></p>
-          </div>
+          </div> */}
           <div className={styles.model}></div>
-          <Scroller>
-            {/* <img src="/portfolio/images/subtitle.svg" alt="saving the world one app at a time" /> */}
-          </Scroller>
+          <Scroller/>
         </div>
       </div>
       {/* <HelpingHand/> */}

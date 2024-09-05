@@ -7,17 +7,10 @@
     bottom: 0;
 }
 
-/* .marquee .item {
-    display: inline-block;
-    padding-left: 100%;
-    padding-bottom: 5px;
-    animation: marquee 15s linear infinite;
-} */
-
 .marquee::before {
     content: '';
     display: block;
-    height: 20px;
+    height: 30px;
     aspect-ratio: 279 / 5;
     background-size: cover;
     background-image: url('/portfolio/images/subtitle.svg');
@@ -34,7 +27,7 @@
 .marquee::after {
     content: '';
     display: block;
-    height: 20px;
+    height: 30px;
     aspect-ratio: 279 / 5;
     background-size: cover;
     background-image: url('/portfolio/images/subtitle_outline.svg');
@@ -53,5 +46,5 @@
 
 @keyframes marquee {
     0%   { transform: translate(0, 0); }
-    100% { transform: translate(-180%, 0); }
+    100% { transform: translate(-160%, 0); }
 }
