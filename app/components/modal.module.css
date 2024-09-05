@@ -29,7 +29,7 @@
     }
 
 .modalBody {
-    height: 50vh;
+    height: max-content;
     padding: 10px;
     margin: 0;
 }
