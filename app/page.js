@@ -2,6 +2,7 @@
 
 import { Inter } from "next/font/google";
 // import HelpingHand from "./components/helpingHand"
+import Scroller from "./components/scroller"
 import Slider from "./components/slider";
 import SliderItem from "./components/slider-item";
 import Modal from './components/modal';
@@ -26,6 +27,9 @@ export default function Home() {
 
   return (
     <>
+      <Scroller>
+        <img src="/portfolio/images/subtitle.svg" alt="saving the world one app at a time" />
+      </Scroller>
       <div className={styles.banner}>
         <Slider qty={9}>
           <SliderItem itemId={1} openModal={openModal}/>
