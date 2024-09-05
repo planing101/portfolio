@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import { Inter } from "next/font/google";
 import DOMPurify from 'dompurify'; // For sanitizing HTML
 import { fetchModelContentByItemId } from '../services/appService';
 
 import styles from './modal.module.css';
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Modal({ itemId, isOpen, onClose, children }) {
     const [modalModel, setModalModel] = useState({ title: "", body: [""] });
@@ -26,9 +29,9 @@ export default function Modal({ itemId, isOpen, onClose, children }) {
             <div className={styles.modal}>
                 <div className={styles.modalHeader}>
                     <button onClick={onClose} className={styles.closeCross}>&times;</button>
-                    <h2>{modalModel.title}</h2>
+                    <h2 className={inter.className}>{modalModel.title}</h2>
                 </div>
-                <div className={styles.modalBody}>
+                <div className={`${styles.modalBody} ${inter.className}`}>
                     {modalModel.body.map((text, index) => (
                         <p key={index} dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(text) }} />
                     ))}
