@@ -27,9 +27,6 @@ export default function Home() {
 
   return (
     <>
-      <Scroller>
-        <img src="/portfolio/images/subtitle.svg" alt="saving the world one app at a time" />
-      </Scroller>
       <div className={styles.banner}>
         <Slider qty={9}>
           <SliderItem itemId={1} openModal={openModal}/>
@@ -50,6 +47,9 @@ export default function Home() {
             <p className={inter.className}><strong>Web Design</strong></p>
           </div>
           <div className={styles.model}></div>
+          <Scroller>
+            {/* <img src="/portfolio/images/subtitle.svg" alt="saving the world one app at a time" /> */}
+          </Scroller>
         </div>
       </div>
       {/* <HelpingHand/> */}

@@ -1,21 +1,50 @@
 .marquee {
-    color: white;
-    background: transparent;
+    height: 100vh;
+    width: 100vw;
     white-space: nowrap;
     overflow: hidden;
-    box-sizing: border-box;
-    position: fixed;
-    left: 0px;
+    position: absolute;
     bottom: 0;
-    right: 0;
-    z-index: 1;
 }
 
-.marquee .item {
+/* .marquee .item {
     display: inline-block;
     padding-left: 100%;
     padding-bottom: 5px;
     animation: marquee 15s linear infinite;
+} */
+
+.marquee::before {
+    content: '';
+    display: block;
+    height: 20px;
+    aspect-ratio: 279 / 5;
+    background-size: cover;
+    background-image: url('/portfolio/images/subtitle.svg');
+    background-repeat: no-repeat;
+    opacity: 0.75;
+    margin-left: 100vw;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+    z-index: 1;
+    animation: marquee var(--scrollSpeed) linear infinite;
+}
+
+.marquee::after {
+    content: '';
+    display: block;
+    height: 20px;
+    aspect-ratio: 279 / 5;
+    background-size: cover;
+    background-image: url('/portfolio/images/subtitle_outline.svg');
+    background-repeat: no-repeat;
+    margin-left: 100vw;
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    animation: marquee var(--scrollSpeed) linear infinite;
 }
 
 .marquee .item img {
@@ -24,5 +53,5 @@
 
 @keyframes marquee {
     0%   { transform: translate(0, 0); }
-    100% { transform: translate(-100%, 0); }
+    100% { transform: translate(-180%, 0); }
 }
