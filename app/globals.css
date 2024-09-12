@@ -1,6 +1,7 @@
 :root{
   --modal-forecolour: #a1a4a7;
   --scrollSpeed: 25s;
+  --carouselSpeed: 20s;
 }
 
 html,

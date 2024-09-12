@@ -4,7 +4,6 @@ import { Inter } from "next/font/google";
 // import HelpingHand from "./components/helpingHand"
 import Scroller from "./components/scroller"
 import Slider from "./components/slider";
-import SliderItem from "./components/slider-item";
 import Modal from './components/modal';
 import React, { useState } from 'react';
 
@@ -28,17 +27,7 @@ export default function Home() {
   return (
     <>
       <div className={styles.banner}>
-        <Slider qty={9}>
-          <SliderItem itemId={1} openModal={openModal}/>
-          <SliderItem itemId={2} openModal={openModal}/>
-          <SliderItem itemId={3} openModal={openModal}/>
-          <SliderItem itemId={4} openModal={openModal}/>
-          <SliderItem itemId={5} openModal={openModal}/>
-          <SliderItem itemId={6} openModal={openModal}/>
-          <SliderItem itemId={7} openModal={openModal}/>
-          <SliderItem itemId={8} openModal={openModal}/>
-          <SliderItem itemId={9} openModal={openModal}/>
-        </Slider>
+        <Slider openModal={openModal} />
         {/* <div className={styles.hintHand}></div> */}
         <div className={styles.content}>
           <h1 className={inter.className}>Portfolio</h1>

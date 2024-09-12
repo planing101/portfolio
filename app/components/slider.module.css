@@ -5,7 +5,7 @@
   top: 10%;
   left: calc(50% - 75px);
   transform-style: preserve-3d;
-  animation: autoRun 20s linear infinite;
+  animation: autoRun var(--carouselSpeed) linear infinite;
   z-index: 3;
 }
 
@@ -34,7 +34,8 @@
       outline: solid 1px white;
       transform: scale(1.1);
     }
-    .slider:hover {
+
+   .slider:hover {
       animation-play-state: paused;
     }
   
