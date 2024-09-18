@@ -1,9 +1,17 @@
+.hintHandContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .hintHand {
   background-image: url('/portfolio/images/pointer-1_200x200.png');
   height: 200px;
   width: 200px;
   opacity: 0.9;
-  animation: showHint 10s ease-in-out infinite;
+  animation: showHint 9s ease-in-out infinite;
   transform:
     translateX(100vw)
     translateY(100vh)
@@ -14,47 +22,48 @@
   z-index: 3;
 }
   
-  @keyframes showHint {
-    0% {
-      transform:
-        translateX(100vw)
-        translateY(100vh)
-        rotateZ(0);
-    }
-    60% {
-      transform:
-        translateX(100vw)
-        translateY(100vh)
-        rotateZ(0);
-    }
-    70% {
-      background-image: url('/portfolio/images/pointer-1_200x200.png');
-      transform:
+/* Animation tweens */
+
+@keyframes showHint {
+  0% {
+    transform:
+      translateX(100vw)
+      translateY(100vh)
+      rotateZ(0);
+  }
+  60% {
+    transform:
+      translateX(100vw)
+      translateY(100vh)
+      rotateZ(0);
+  }
+  70% {
+    background-image: url('/portfolio/images/pointer-1_200x200.png');
+    transform:
+      translateX(0)
+      translateY(0)
+      rotateZ(-16deg);
+  }
+  75% {
+    background-image: url('/portfolio/images/pointer-2_200x200.png');
+  }
+  80% {
+    background-image: url('/portfolio/images/pointer-1_200x200.png');
+      transform: 
         translateX(0)
         translateY(0)
         rotateZ(-16deg);
-    }
-    75% {
-      background-image: url('/portfolio/images/pointer-2_200x200.png');
-    }
-    80% {
-      background-image: url('/portfolio/images/pointer-1_200x200.png');
-        transform: 
-          translateX(0)
-          translateY(0)
-          rotateZ(-16deg);
-    }
-    90% {
-      transform: 
-        translateX(-100vw)
-        translateY(100vh)
-        rotateZ(0);
-    }
-    100% {
-      transform: 
-        translateX(-100vw)
-        translateY(100vh)
-        rotateZ(0);
-    }
   }
-  
+  90% {
+    transform: 
+      translateX(-100vw)
+      translateY(100vh)
+      rotateZ(0);
+  }
+  100% {
+    transform: 
+      translateX(-100vw)
+      translateY(100vh)
+      rotateZ(0);
+  }
+}
